@@ -6,10 +6,11 @@ const swaggerJSDoc = require('swagger-jsdoc');
 const cors = require('cors');
 const app  = express();
 // const port = 3006;
+const port = process.env.PORT || 3006;
+
 app.use(cors())
 
 //=================================================
-const port = process.env.PORT || 3006;
 
 //==================================================
 app.use(bodyParser.json());
@@ -22,7 +23,7 @@ const swaggerOptions = {
         },
         host : `reemalwahaibi-app-e7862f10f295.herokuapp.com`,
         basePath: '/',
-        schemas : ['http2']
+        schemas : ['https']
     },
     servers : [{ url: `https://reemalwahaibi-app-e7862f10f295.herokuapp.com/`  }],
     apis: ['./users-server.js']
