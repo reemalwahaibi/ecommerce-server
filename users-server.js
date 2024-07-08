@@ -6,7 +6,7 @@ const swaggerJSDoc = require('swagger-jsdoc');
 const cors = require('cors');
 const app  = express();
 // const port = 3006;
-const port = process.env.PORT || 3006;
+const port = process.env.PORT || 5768;
 
 app.use(cors())
 
@@ -25,7 +25,7 @@ const swaggerOptions = {
         basePath: '/',
         schemas : ['https']
     },
-    servers : [{ url: `https://reemalwahaibi-app-e7862f10f295.herokuapp.com/`  }],
+    servers : [{ url: `https://reemalwahaibi-app-f7fdb50e4fd7.herokuapp.com/`  }],
     apis: ['./users-server.js']
 }
 
@@ -356,7 +356,7 @@ app.get('/api/category', async(req,res) => {
 //================category========================
 
 app.listen(port, ()=> {
-    console.log(`Server is running on https://reemalwahaibi-app-e7862f10f295.herokuapp.com/`)
-    console.log(`Swagger UI is avaiable on https://reemalwahaibi-app-e7862f10f295.herokuapp.com/api-ui`)
+    console.log(`Server is running on https://reemalwahaibi-app-f7fdb50e4fd7.herokuapp.com/`)
+    console.log(`Swagger UI is avaiable on https://reemalwahaibi-app-f7fdb50e4fd7.herokuapp.com/api-ui`)
     
     });
