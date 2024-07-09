@@ -260,7 +260,7 @@ app.get('/api/users/:email/:password', async(req,res) => {
     const {email,password} = req.params;
 
     const result  = await sql.query
-    (`Exec sp_Login @Email='${email}',@Password=${password}`);
+    (`Exec sp_Login @Email='${email}',@Password='${password}'`);
     res.json(result.recordset);
     }catch(error){
     res.status(500).send(error.message);
